@@ -2,26 +2,11 @@
     "name": "Image B Gone",
     "version": "0.1.0",
     "description": "Remove all images on a webpage",
-    "permissions": [],
-    "host_permissions": ["https://*"],
-    "background": {
-      "service_worker": "background.js"
-    },
     "content_scripts": [
       {
-        "matches": ["https://*"],
-        "js": ["contentScript.js"]
-      }
-    ],
-    "web_accessible_resources": [
-      {
-        "resources": [
-          "assets/bookmark.png",
-          "assets/play.png",
-          "assets/delete.png",
-          "assets/save.png"
-        ],
-        "matches": ["https://*.youtube.com/*"]
+        "matches": ["<all_urls>"],
+        "js": ["script.js"],
+        "css": ["styles.css"]
       }
     ],
     "action": {
